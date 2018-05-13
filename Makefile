@@ -1,4 +1,4 @@
-main: main.c
+main: *.c *.h
 	gcc main.c -o main
 
 clean:
