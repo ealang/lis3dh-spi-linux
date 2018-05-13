@@ -20,19 +20,19 @@ struct Lis3dhStatus {
 /**
  * Write values to the lis3dh registers to initialize it.
  */
-uint8_t lis3dh_initialize(int fd, uint8_t sample_rate_flags);
+uint8_t lis3dh_initialize(int fd, int selectPin, uint8_t sample_rate_flags);
 
 /**
  * Test if we can communicate with the lis3dh.
  */
-void lis3dh_self_check(int fd);
+void lis3dh_self_check(int fd, int selectPin);
 
 /**
  * Check data status of the device.
  */
-struct Lis3dhStatus lis3dh_status(int fd);
+struct Lis3dhStatus lis3dh_status(int fd, int selectPin);
 
 /**
  * Take an acceleration sample.
  */
-struct Accel3 lis3dh_sample_accel(int fd);
+struct Accel3 lis3dh_sample_accel(int fd, int selectPin);
