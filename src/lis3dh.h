@@ -23,12 +23,12 @@ struct Lis3dhStatus {
 uint8_t lis3dh_initialize(int fd, uint8_t sample_rate_flags);
 
 /**
- * Test if the device is working correctly.
+ * Test if we can communicate with the lis3dh.
  */
 void lis3dh_self_check(int fd);
 
 /**
- * Check status of the device.
+ * Check data status of the device.
  */
 struct Lis3dhStatus lis3dh_status(int fd);
 
