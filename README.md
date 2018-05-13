@@ -9,3 +9,7 @@ To build and run:
 ```
 make && ./main
 ```
+
+# License
+
+This program was derived from [spidev_test.c](https://github.com/torvalds/linux/blob/ccda3c4b77777f66aeb3c531352bb40d59501c59/tools/spi/spidev_test.c). 
