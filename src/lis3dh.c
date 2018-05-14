@@ -28,9 +28,9 @@ static void transaction(int fd, int selectPin, uint8_t *tx, uint32_t size, uint8
     .cs_change = 0
   };
 
-  pinMode(selectPin, 0);
+  digitalWrite(selectPin, 0);
   int ret = ioctl(fd, SPI_IOC_MESSAGE(1), &tr);
-  pinMode(selectPin, 1);
+  digitalWrite(selectPin, 1);
   if (ret < 1) {
     pabort("can't send spi message");
   }
