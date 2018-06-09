@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 struct Accel3 {
   float x, y, z;
 };
